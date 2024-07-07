@@ -47,19 +47,39 @@ Future<void> getData(String city) async {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                CircleAvatar(
-                  backgroundImage: AssetImage('images/${weatherData['list'][index]['weather'][0]['main'].toLowerCase()}.png'),                ),
-                // Text(
-                //   "City: ${weatherData['name']}",
-                //   style: TextStyle(fontSize: 22),
-                // ),
-                Text(
-                  "${DateFormat('E dd/MM/yyyy').format(DateTime.fromMillisecondsSinceEpoch(weatherData['list'][index]['dt'] * 1000))}",
-                  style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold),
-                ),
+               Row(
+                 children:  <Widget>[
+                   CircleAvatar(
+                     backgroundImage: AssetImage('images/${weatherData['list'][index]['weather'][0]['main'].toLowerCase()}.png'),                ),
+                   // Text(
+                   //   "City: ${weatherData['name']}",
+                   //   style: TextStyle(fontSize: 22),
+                   // ),
+
+             Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: Column(
+                 crossAxisAlignment: CrossAxisAlignment.start,
+                 children: <Widget>[
+                   Text(
+                     "${DateFormat('E dd/MM/yyyy').format(DateTime.fromMillisecondsSinceEpoch(weatherData['list'][index]['dt'] * 1000))}",
+                     style: TextStyle(
+                         fontSize: 18,
+                         color: Colors.black,
+                         fontWeight: FontWeight.bold),
+                   ),
+                   Text(
+                     "${DateFormat('HH:mm').format(DateTime.fromMillisecondsSinceEpoch(weatherData['list'][index]['dt'] * 1000))}  | ${weatherData['list'][index]['weather'][0]['main']}",
+                     style: TextStyle(
+                         fontSize: 18,
+                         color: Colors.black,
+                         fontWeight: FontWeight.bold),
+                   ),
+                 ],
+               ),
+             )
+                 ],
+               ),
                 Text(
                   "Temperature: ${(weatherData['list'][index]['main']['temp'] - 273.15).toStringAsFixed(2)} °C",
                   style: TextStyle(fontSize: 18),
