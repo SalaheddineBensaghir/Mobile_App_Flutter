@@ -14,7 +14,7 @@ class MainDrawer extends StatelessWidget {
       {"title":"Counter Stful","route":"/counter1","leadingIcon":Icons.event,"trailingIcon":Icons.arrow_forward},
       {"title":"Quiz","route":"/quiz","leadingIcon":Icons.quiz,"trailingIcon":Icons.arrow_forward},
        {"title":"Weather","route":"/weather","leadingIcon":Icons.sunny ,"trailingIcon":Icons.arrow_forward},
-      // {"title":"Git users","route":"/users","leadingIcon":Icons.person,"trailingIcon":Icons.arrow_forward},
+      {"title":"Gallery","route":"/Gallery","leadingIcon":Icons.image ,"trailingIcon":Icons.arrow_forward},
 
     ];
     return  Drawer(

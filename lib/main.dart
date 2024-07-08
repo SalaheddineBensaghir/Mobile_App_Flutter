@@ -1,6 +1,6 @@
+import 'package:app_flutter/ui/pages/Gallery.page.dart';
 import 'package:app_flutter/ui/pages/counter.bloc.page.dart';
 import 'package:app_flutter/ui/pages/counter.statteful.page.dart';
-import 'package:app_flutter/ui/pages/git.users.page.dart';
 import 'package:app_flutter/ui/pages/home.page.dart';
 import 'package:app_flutter/ui/pages/quiz.page.dart';
 import 'package:app_flutter/ui/pages/weather.detail.dart';
@@ -35,7 +35,8 @@ class RootView extends StatelessWidget {
         "/counter1":(context)=>const CounterStatefulPage(),
         "/quiz":(context)=> Quiz(),
          "/weather":(context)=>const Weather(),
-        // "/users":(context)=>const GitUsersPage(),
+        "/Gallery" : (context)=>  Gallery()
+
 
 
       },
